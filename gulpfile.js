@@ -6,6 +6,7 @@ var base64 = require("gulp-base64");
 var concat = require("gulp-concat");
 var inject = require("gulp-inject");
 var connect = require("gulp-connect");//fuwuqi
+//注释
 
 gulp.task("css",function(){
 	gulp.src(["./src/css/zhuye.css","./src/css/ziye.css","./src/css/ziye2.css","./src/css/ziye3.css","./src/css/ziye4.css","./src/css/ziye5.css","./src/css/ziye6.css","./src/css/ziye8.css","./src/css/ziye9.css","./src/css/ziye10.css","./src/css/ziye11.css","./src/css/ziye12.css","./src/css/ziye12.css","./src/css/zhuye7.css"])
