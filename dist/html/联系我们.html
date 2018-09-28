@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>联系我们</title>
+	<link rel="stylesheet" href="../css/ziye6.css">
+</head>
+<body>
+	<header>
+	</header>
+	<nav>
+		<div class="navs">
+			<a href="../主页.html">首页</a>
+			<a href="关于华鹏.html">关于华鹏</a>
+			<a href="javascript:;">产品展示</a>
+			<a href="javascript:;">新闻中心</a>
+			<a href="技术实力.html">技术实力</a>
+			<a href="人才中心.html">人才中心</a>
+			<a href="联系我们.html">联系我们</a>
+		</div>
+	</nav>
+	<div class="nav1">
+		<span>您现在的位置:</span>
+		<a href="联系我们.html">联系我们</a>
+		<span>>>联系我们</span>
+	</div>
+	<div class="bq">
+		<ul>
+			<li class="li1">联系我们</li>
+			<li><a href="联系我们.html">联系我们</a></li>
+		</ul>
+		<div class="lunbo">
+			<div class="ul">
+				<span><img src="../images/10.jpg" alt=""></span>
+				<span><img src="../images/11.jpg" alt=""></span>
+				<span><img src="../images/10.jpg" alt=""></span>
+			</div>
+			<div class="dot">
+				<span class="active">1</span>
+				<span>2</span>
+			</div>
+		</div>
+	</div>
+	<div class="neirong">
+		<div class="erweima">
+			<img src="../images/12.jpg" alt="">
+		</div>
+		<div class="lix">
+			<h1>联系我们</h1>
+			<p>
+				<li><b>总部地址：</b>山东省荣成市石岛龙云路468号</li>
+				<li><b>联系电话：</b>86+631-7381873(行政办公室)  7382522(传真)</li>
+				<li><b>电子邮箱：</b><a href="mailto:info@huapengglass.com">info@huapengglass.com</a></li>
+			</p>
+			<div class="p2">
+				<li><b>联系电话:</b> 86+631-7379427（器皿外贸部）&nbsp; 7381862（传真）&nbsp; 电子邮箱：<a href="mailto:marke@huapengglass.com">mailto:marke@huapengglass.com</a></li>
+				<li><b>联系电话:</b> 86+631-7379471（瓶罐外贸部）&nbsp; 7381872（传真）&nbsp; 电子邮箱：<a href="mailto:marke@huapengglass.com">mailto:marke@huapengglass.com</a></li>
+				<li><b>联系电话:</b> 0631-7379469&nbsp;&nbsp;&nbsp;&nbsp; （器皿内贸部）&nbsp; 7381862（传真）&nbsp; 电子邮箱：<a href="mailto:hp902@huapengglass.com">mailto:hp902@huapengglass.com</a></li>
+				<li><b>联系电话:</b> 0631-7379473&nbsp;&nbsp;&nbsp;&nbsp; （瓶罐内贸部）&nbsp; 7382524（传真）&nbsp; 电子邮箱：<a href="glass@huapengglass.com">glass@huapengglass.com</a></li>
+			</div>
+			<div class="ditu">
+				<img src="../images/ditu.jpg" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="dibu">
+		<span>版权所有&copy; 2014  山东华鹏玻璃股份有限公司 技术支持：中企动力 Copyright © 2014 huapengglass.com All Rights Reserved  鲁ICP备14003878号</span>
+	</div>
+	<script src="../js/move.js"></script>
+	<script>
+		var index = 0;
+		var lunbo = document.querySelector('.lunbo');
+		var eUl = document.querySelector('.lunbo .ul');
+		var dots = document.querySelectorAll('.dot span');
+		lunbo.timer = setInterval(fnNext,2000);
+
+		lunbo.onmouseenter=function(){
+			clearInterval(lunbo.timer);
+		}
+
+		lunbo.onmouseleave=function(){
+			lunbo.timer = setInterval(fnNext,2000);
+		}
+		for(var i=0; i<dots.length; i++){
+			dots[i].index = i;
+			dots[i].onclick=function(){
+				index = this.index;
+				fnMove();
+			}
+		}
+		function fnNext(){
+			index++;
+			if(index == eUl.children.length){
+				index=1;
+				eUl.style.left = 0;
+			}
+			fnMove();
+		}
+		function fnMove(){
+			var num = index;
+			if(index == dots.length){
+				num=0;
+			}
+			for(var i=0; i<dots.length; i++){
+				dots[i].className = "";
+			}
+
+			dots[num].className = "active";
+			
+			move(eUl,{  
+				left:-index*lunbo.clientWidth
+			},300);
+		}
+	</script>
+</body>
+</html>

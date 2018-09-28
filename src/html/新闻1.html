@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新闻1</title>
+	<link rel="stylesheet" href="../css/ziye8.css">
+</head>
+<body>
+	<header>
+	</header>
+	<nav>
+		<div class="navs">
+			<a href="../主页.html">首页</a>
+			<a href="关于华鹏.html">关于华鹏</a>
+			<a href="产品展示.html">产品展示</a>
+			<a href="新闻中心.html">新闻中心</a>
+			<a href="技术实力.html">技术实力</a>
+			<a href="人才中心.html">人才中心</a>
+			<a href="联系我们.html">联系我们</a>
+		</div>
+	</nav>
+	<div class="nav1">
+		<span>您现在的位置:</span>
+		<a href="新闻中心.html">新闻首页</a>
+		<span>>></span><a href="新闻中心.html">新闻中心</a>
+		<span>>></span><a href="../主页.html">公司新闻</a>
+		<span> >> 山东华鹏2018迎新春文艺汇演隆重举行</span>
+	</div>
+	<div class="bq">
+		<ul>
+			<li class="li1">新闻中心</li>
+			<li><a href="新闻中心.html">公司新闻（1）</a></li>
+			<li><a href="人才招聘.html">人才招聘（1）</a></li>
+			<li><a href="">投资者关系</a>
+			<div class="erji">
+				<h3>临时报告(0)</h3>
+				<h3>定时报告(0)</h3>
+			</div></li>
+			<li><a href="新闻中心.html">新闻中心</a></li>
+		</ul>
+		<div class="lunbo">
+			<div class="ul">
+				<span><img src="../images/10.jpg" alt=""></span>
+				<span><img src="../images/11.jpg" alt=""></span>
+				<span><img src="../images/10.jpg" alt=""></span>
+			</div>
+			<div class="dot">
+				<span class="active">1</span>
+				<span>2</span>
+			</div>
+		</div>
+	</div>
+	<div class="neirong">
+		<div class="erweima">
+			<img src="../images/12.jpg" alt="">
+		</div>
+		<div class="huodong">
+			<h1>山东华鹏2018迎新春文艺汇演隆重举行</h1>
+			<li>浏览次数：147 &nbsp;&nbsp;日期：2018年2月10日 15:31</li>
+			<div class="wenzi">
+				<p>金鸡报捷去，锦犬送春来。2月9日下午，华鹏礼堂流光溢彩，灯火辉煌，山东华鹏主题为“重整行装再出发  突破发展续新篇”的迎新春文艺汇演在这里隆重举行。璀璨的灯光、曼妙的舞姿把现场幻化为欢乐的海洋，精彩纷呈的文艺汇演为广大职工送上了一道丰盛的新年文化盛宴。</p>
+				<p>欢快激昂的歌舞《中华炫起来》拉开了迎新春文艺汇演的序幕，欢快的节奏、喜庆的服装、绚丽的舞步，顿时把现场观众带入新春佳节的浓厚氛围。华鹏人喜爱的歌手，CCTV央视星光大道嘉宾评委、音乐唱作人、主持人李帅威再次唱起原创歌曲，意在让大家支持、记住家在文登的“明星老乡”。小品《过年》为大家呈现了一次温馨的情感旅程，道出了家是融融相守的地方。曾经在多次比赛中获奖的公司实力歌手姚爱菊，一曲《我爱你中国》技惊四座，婉转深沉的嗓音，激情昂扬的情感，抒发了对祖国大好河山的深深眷恋，也表达了广大职工对华鹏公司的真挚热爱。多才多艺的林林带给大家的萨克斯演奏与观众形成热烈互动，歌曲串烧《又见炊烟》将现场气氛推向高潮，还有独具特色的民族舞蹈《嫁裙》，浓郁的民族特色服装和轻盈舞步，让广大观众眼睛一亮，给现场增添了喜庆、欢乐、祥和的氛围。</p>
+				<p>整场文艺汇演始终洋溢着喜庆、祥和的节日气氛，迎新春文艺汇演持续60分钟，在歌舞《共圆中国梦》优美的旋律中落下帷幕。</p>
+			</div>
+			<div class="tup">
+				<img src="../images/40.jpg" alt="">
+				<img src="../images/41.jpg" alt="">
+				<img src="../images/42.jpg" alt="">
+				<img src="../images/43.jpg" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="dibu">
+		<span>版权所有&copy; 2014  山东华鹏玻璃股份有限公司 技术支持：中企动力 Copyright © 2014 huapengglass.com All Rights Reserved  鲁ICP备14003878号</span>
+	</div>
+	<script src="../js/move.js"></script>
+	<script>
+		var index = 0;
+		var lunbo = document.querySelector('.lunbo');
+		var eUl = document.querySelector('.lunbo .ul');
+		var dots = document.querySelectorAll('.dot span');
+		lunbo.timer = setInterval(fnNext,2000);
+
+		lunbo.onmouseenter=function(){
+			clearInterval(lunbo.timer);
+		}
+
+		lunbo.onmouseleave=function(){
+			lunbo.timer = setInterval(fnNext,2000);
+		}
+		for(var i=0; i<dots.length; i++){
+			dots[i].index = i;
+			dots[i].onclick=function(){
+				index = this.index;
+				fnMove();
+			}
+		}
+		function fnNext(){
+			index++;
+			if(index == eUl.children.length){
+				index=1;
+				eUl.style.left = 0;
+			}
+			fnMove();
+		}
+		function fnMove(){
+			var num = index;
+			if(index == dots.length){
+				num=0;
+			}
+			for(var i=0; i<dots.length; i++){
+				dots[i].className = "";
+			}
+
+			dots[num].className = "active";
+			
+			move(eUl,{  
+				left:-index*lunbo.clientWidth
+			},300);
+		}
+	</script>
+</body>
+</html>

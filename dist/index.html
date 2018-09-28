@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<!-- inject:css -->
+	<link rel="stylesheet" href="css/all.css">
+	<!-- endinject  -->
+</head>
+<body>
+	<header>
+		<a href="javascript:;">ENGLISH</a>
+		<img src="images/8.jpg" alt="">
+	</header>
+	<nav>
+		<div class="navs">
+			<a href="主页.html">首页</a>
+			<a href="html/关于华鹏.html">关于华鹏</a>
+			<a href="html/产品展示.html">产品展示</a>
+			<a href="html/新闻中心.html">新闻中心</a>
+			<a href="html/技术实力.html">技术实力</a>
+			<a href="html/人才中心.html">人才中心</a>
+			<a href="html/联系我们.html">联系我们</a>
+		</div>
+	</nav>
+	<div class="lunbo">
+		<ul>
+			<li><img src="images/2.jpg"></li>
+			<li><img src="images/3.jpg"></li>
+			<li><img src="images/2.jpg"></li>
+		</ul>
+		<div class="dot">
+			<span class="active">1</span>
+			<span>2</span>
+		</div>
+	</div>
+	<div class="neirong">
+		<img src="images/9.jpg" alt="">
+		<img src="images/7.jpg" alt="">
+		<img src="images/4.jpg" alt="">
+	</div>
+	<div class="tu">
+		<img src="images/5.jpg" alt="">
+		<img src="images/6.jpg" alt="">
+	</div>
+	<div class="dibu">
+		<span>版权所有&copy; 2014  山东华鹏玻璃股份有限公司 技术支持：中企动力 Copyright © 2014 huapengglass.com All Rights Reserved  鲁ICP备14003878号</span>
+	</div>
+	<!-- inject:js-->
+	<script src="js/all.js"></script>
+	<!-- endinject -->
+	<script>
+		var index = 0;
+		var lunbo = document.querySelector('.lunbo');
+		var eUl = document.querySelector('.lunbo ul');
+		var dots = document.querySelectorAll('.dot span');
+		lunbo.timer = setInterval(fnNext,2000);
+
+		lunbo.onmouseenter=function(){
+			clearInterval(lunbo.timer);
+		}
+
+		lunbo.onmouseleave=function(){
+			lunbo.timer = setInterval(fnNext,2000);
+		}
+		for(var i=0; i<dots.length; i++){
+			dots[i].index = i;
+			dots[i].onclick=function(){
+				index = this.index;
+				fnMove();
+			}
+		}
+		function fnNext(){
+			index++;
+			if(index == eUl.children.length){
+				index=1;
+				eUl.style.left = 0;
+			}
+			fnMove();
+		}
+		function fnMove(){
+			var num = index;
+			if(index == dots.length){
+				num=0;
+			}
+			for(var i=0; i<dots.length; i++){
+				dots[i].className = "";
+			}
+
+			dots[num].className = "active";
+			
+			move(eUl,{  
+				left:-index*lunbo.clientWidth
+			},300);
+		}
+	</script>
+</body>
+</html>

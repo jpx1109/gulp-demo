@@ -1,0 +1,119 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+header{
+	width: 1002px;
+	height: 85px;
+	background: url(../images/1.jpg);
+	margin: 0 auto;
+}
+header a{
+	text-decoration: none;
+	font-weight: bold;
+	color: #000;
+	float:right;
+	margin-top:20px;
+	margin-right:25px;
+}
+header img{
+	margin-top:20px;
+	margin-left: 821px;
+}
+nav{
+	width: 100%;
+	height: 35px;
+	background: #0057a6;
+	border-bottom: 1px solid #e5241f;
+}
+nav .navs{
+	width: 1002px;
+	margin: 0 auto;
+	padding:0 50px;
+	box-sizing: border-box;
+}
+nav .navs a{
+	display: block;
+	float: left;
+	width: 116px;
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	color:#000;
+	text-decoration: none;
+	margin-left:12px;
+}
+nav .navs a:hover{
+	background: red;
+}
+.lunbo{
+	width: 1245px;
+	height:379px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+.lunbo ul li{
+	list-style: none;
+	float: left;
+}
+.lunbo ul li img{
+	width: 1245px;
+	height: auto;
+}
+.lunbo ul{
+	width: 10000px;
+	position: absolute;
+	z-index: -1;
+	left:0;
+	top:0;
+}
+.lunbo .dot{
+	position: absolute;
+	right:20px;
+	bottom:10px;
+}
+.lunbo span{
+	display: block;
+	float: left;
+	width: 20px;
+	height: 20px;
+	border:1px solid #000;
+	background: #fff;
+	color:#000;
+	text-align: center;
+	line-height: 20px;
+	margin-left: 5px;
+}
+.lunbo span.active{
+	background: red;
+}
+.neirong{
+	width: 1022px;
+	height:156px;
+	background: url(../images/1.png) no-repeat top;
+	margin:-56px auto;
+	padding:17px 0;
+	box-sizing: border-box;
+}
+.neirong img{
+	float: left;
+	margin-left: 30px;
+}
+.tu{
+	width: 1022px;
+	height:156px;
+	margin: 80px  121px 0 121px;
+	padding-left: 300px;
+	box-sizing: border-box;
+}
+.dibu{
+	width: 100%;
+	height: 66px;
+	background:#0055a1;
+	margin-top: 20px;
+	line-height: 66px;
+	text-align: center;
+	font-size: 14px;
+	color:#fff;
+}

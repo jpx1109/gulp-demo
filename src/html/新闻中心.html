@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新闻中心</title>
+	<link rel="stylesheet" href="../css/zhuye7.css">
+</head>
+<body>
+	<header>
+	</header>
+	<nav>
+		<div class="navs">
+			<a href="../主页.html">首页</a>
+			<a href="关于华鹏.html">关于华鹏</a>
+			<a href="产品展示.html">产品展示</a>
+			<a href="新闻中心.html">新闻中心</a>
+			<a href="技术实力.html">技术实力</a>
+			<a href="人才中心.html">人才中心</a>
+			<a href="联系我们.html">联系我们</a>
+		</div>
+	</nav>
+	<div class="nav1">
+		<span>您现在的位置:</span>
+		<a href="新闻中心.html">新闻首页</a>
+	</div>
+	<div class="bq">
+		<ul>
+			<li class="li1">新闻中心</li>
+			<li><a href="新闻中心.html">公司新闻</a></li>
+		</ul>
+		<div class="lunbo">
+			<div class="ul">
+				<span><img src="../images/10.jpg" alt=""></span>
+				<span><img src="../images/11.jpg" alt=""></span>
+				<span><img src="../images/10.jpg" alt=""></span>
+			</div>
+			<div class="dot">
+				<span class="active">1</span>
+				<span>2</span>
+			</div>
+		</div>
+	</div>
+	<div class="neirong">
+		<div class="erweima">
+			<img src="../images/12.jpg" alt="">
+		</div>
+		<ul>
+			<li><a href="新闻1.html">山东华鹏2018迎新春文艺汇演隆重举行</a><span>2018-02-10</span></li>
+			<li><a href="">战高温斗酷暑 创高产夺高效</a><span>2017-07-26</span></li>
+			<li><a href="">公司持续提升信息化管理水平</a><span>2017-07-26</span></li>
+			<li><a href="">安庆市领导来山东华鹏考察</a><span>2017-07-20</span></li>
+			<li><a href="">安庆华鹏公司荣获“守合同重信用企业”称号</a><span>2017-07-20</span></li>
+			<li><a href="">公司再获轻工业行业十强企业殊荣</a><span>2017-07-15</span></li>
+			<li><a href="">公司各部门齐心协力防暑降温</a><span>2017-07-14</span></li>
+			<li><a href="">山东华鹏荣获“金玻奖”十大品牌荣誉</a><span>2017-06-05</span></li>
+			<li><a href="">山东华赢新材料有限公司获得工商注册</a><span>2017-05-26</span></li>
+			<li><a href="">山东华鹏玻璃股份有限公司质量信用报告</a><span>2017-05-19</span></li>
+		</ul>
+		<div class="tz">
+			<span>当前显示1-10条</span>
+			<div class="tz1">
+				<b><a href="">首页</a></b>
+				<i><a href="">上一页</a></i>
+				<a href="">1</a>
+				<a href="">2</a>
+				<a href="">3</a>
+				<a href="">4</a>
+				<a href="">5</a>
+				<i><a href="">下一页</a></i>
+				<b><a href="">末页</a></b>
+			</div>
+		</div>
+	</div>
+	<div class="dibu">
+		<span>版权所有&copy; 2014  山东华鹏玻璃股份有限公司 技术支持：中企动力 Copyright © 2014 huapengglass.com All Rights Reserved  鲁ICP备14003878号</span>
+	</div>
+	<script src="../js/move.js"></script>
+	<script>
+		var index = 0;
+		var lunbo = document.querySelector('.lunbo');
+		var eUl = document.querySelector('.lunbo .ul');
+		var dots = document.querySelectorAll('.dot span');
+		lunbo.timer = setInterval(fnNext,2000);
+
+		lunbo.onmouseenter=function(){
+			clearInterval(lunbo.timer);
+		}
+
+		lunbo.onmouseleave=function(){
+			lunbo.timer = setInterval(fnNext,2000);
+		}
+		for(var i=0; i<dots.length; i++){
+			dots[i].index = i;
+			dots[i].onclick=function(){
+				index = this.index;
+				fnMove();
+			}
+		}
+		function fnNext(){
+			index++;
+			if(index == eUl.children.length){
+				index=1;
+				eUl.style.left = 0;
+			}
+			fnMove();
+		}
+		function fnMove(){
+			var num = index;
+			if(index == dots.length){
+				num=0;
+			}
+			for(var i=0; i<dots.length; i++){
+				dots[i].className = "";
+			}
+
+			dots[num].className = "active";
+			
+			move(eUl,{  
+				left:-index*lunbo.clientWidth
+			},300);
+		}
+	</script>
+</body>
+</html>

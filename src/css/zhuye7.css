@@ -1,0 +1,230 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+header{
+	width: 1002px;
+	height: 85px;
+	background: url(../images/1.jpg);
+	margin: 0 auto;
+}
+nav{
+	width: 100%;
+	height: 35px;
+	background: #0057a6;
+	border-bottom: 1px solid #e5241f;
+}
+nav .navs{
+	width: 1002px;
+	margin: 0 auto;
+	padding:0 50px;
+	box-sizing: border-box;
+}
+nav .navs a{
+	display: block;
+	float: left;
+	width: 116px;
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	color:#000;
+	text-decoration: none;
+	margin-left:12px;
+}
+nav .navs a:hover{
+	background: red;
+}
+.nav1{
+	width: 1022px;
+	height: 30px;
+	margin:12px auto;
+	background: #f1f1f1;
+	border:1px solid #dadada;
+	padding-left: 22px;
+	box-sizing: border-box;
+	line-height: 30px;
+	font-size: 14px;
+}
+.nav1 a{
+	text-decoration: none;
+}
+.bq{
+	width: 1022px;
+	height: 206px;
+	margin:0 auto;
+}
+.bq ul{
+	width: 203px;
+	float: left;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	overflow: hidden;
+}
+.bq ul .li1{
+	list-style: none;
+	width: 203px;
+	height: 32px;
+	font-size: 16px;
+	color:#fff;
+	line-height: 32px;
+	text-align: center;
+	background: #0056a1;
+}
+.bq ul li{
+	margin-top: 3px;
+	background: url(../images/bai.jpg);
+}
+.bq ul li a{
+	display: block;
+	text-decoration: none;
+	width: 203px;
+	height: 32px;
+	font-size: 12px;
+	color: #000;
+	text-align: center;
+	line-height: 32px;
+}
+.bq ul li a:hover{
+	color:#fff;
+}
+.lunbo{
+	width: 770px;
+	height: 180px;
+	float: left;
+	margin-top:5px;
+	margin-left: 35px;
+	position: relative;
+	overflow: hidden;
+}
+.lunbo .ul{
+	width: 10000px;
+	position: absolute;
+	z-index: -1;
+	left:0;
+	top:0;
+}
+.lunbo .ul span{
+	float: left;
+}
+.lunbo .dot{
+	position: absolute;
+	right:20px;
+	bottom:10px;
+}
+.lunbo  .dot span{
+	display: block;
+	float: left;
+	width: 20px;
+	height:20px;
+	border:1px solid #000;
+	background: #fff;
+	color:#000;
+	text-align: center;
+	line-height: 20px;
+	margin-left: 5px;
+}
+.lunbo .dot span.active{
+	background: red;
+}
+.neirong{
+	width: 1022px;
+	height:610px;
+	margin:10px auto;
+}
+.neirong .erweima{
+	width: 200px;
+	height: 250px;
+	float: left;
+	margin-top: -130px;
+}
+.neirong ul{
+	width: 770px;
+	float: left;
+	margin-left:35px;
+	padding-top: 10px;
+	box-sizing: border-box;
+	list-style: none;
+}
+.neirong ul li{
+	display: block;
+	width: 770px;
+	height: 50px;
+	padding-left: 16px;
+	opacity: .7;
+	box-sizing: border-box;
+	border-bottom: 1px dashed gray;
+	background: url(../images/icon-09.gif) no-repeat left;
+}
+.neirong ul li a{
+	display: inline-block;
+	text-decoration: none;
+	height: 50px;
+	line-height: 50px;
+	color: #000;
+	font-size: 14px;
+}
+.neirong ul li span{
+	float: right;
+	font-size: 14px;
+	margin-top:8px;
+}
+.tz{
+	width: 770px;
+	float: left;
+	margin-left: 250px;
+	margin-top: 30px;
+}
+.tz .tz1{
+	float: right;
+	margin-right: 20px;
+}
+.tz .tz1 a{
+	display: inline-block;
+	width:20px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	text-decoration: none;
+	color:#000;
+	font-size: 14px;
+	border:1px solid blue;
+}
+.tz .tz1 b a{
+	display: inline-block;
+	width: 40px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+}
+.tz .tz1 i a{
+	display: inline-block;
+	width:60px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+}
+.tz .tz1 a:hover{
+	background: pink;
+}
+.tz .tz1 i a:hover{
+	background: pink;
+}
+.tz .tz1 b a:hover{
+	background: pink;
+}
+.tz .tz1 b{
+	font-weight: normal;
+}
+.tz .tz1 i{
+	font-style: normal;
+}
+.dibu{
+	width: 100%;
+	height: 66px;
+	background:#0055a1;
+	margin-top: 20px;
+	line-height: 66px;
+	text-align: center;
+	font-size: 14px;
+	color:#fff;
+}
